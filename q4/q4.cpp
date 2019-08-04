@@ -32,7 +32,10 @@ char* tenToBaser(int num, int base, char* ans){
             coeff++;
             num-=temp;
         }
-        ans[i]=coeff+48;
+        if(coeff<10)
+            ans[i]=coeff+48;
+        else
+            ans[i]=coeff+55;
         i++;
         power--;
     }
