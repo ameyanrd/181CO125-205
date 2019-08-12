@@ -38,6 +38,7 @@ bool set_string(string &s1, string &s2){
 		else if(index==len-1){
 				s1+="0";
 		}
+		index=-1;
 		len = s2.size();
 		for(int i=0; i<len; i++){
 				if(s2[i]=='.'){
@@ -138,9 +139,16 @@ void reverse(string &s){
       j--;
     }
 }
-
+void enumerate()
+{
+	int i=0;
+	while(i<=10000)
+		i++;
+}
 int main(){
-	int i, int_res,x;
+	int i, x;
+	enumerate();
+	unsigned long long int_res;
 	double num1=0,num2=0,res=0,temp;
 	char op;
 	string s1,s2,result;
@@ -168,29 +176,31 @@ int main(){
 								break;
 	}
 	if(res==0){
-			cout<<"0.0";
+			cout<<"0.0\n";
 	}
 	else{
+			result="";
 			int_res = res;
 			res-=int_res;
 			if(num1<num2 && op=='-'){
-					cout<<"-";
+				cout<<"-";
 			}
-			result="";
+			if(int_res==0){	cout<<"0";	}
 			while(int_res>0){
 				result+=num_to_char(int_res%x);
 				int_res = int_res/x;
 			}
 			reverse(result);
 			cout<<result<<".";
+			int count = 35;
+			while(res!=0 && count>0){
+				count--;
+				temp = x*res;
+				int_res = temp;
+				res = temp-int_res;
+				cout<<num_to_char(int_res%x);
+			}
 	}
-	int count = 25;
-	while(res!=0 && count>0){
-			count--;
-			temp = x*res;
-			int_res = temp;
-			res = temp-int_res;
-			cout<<num_to_char(int_res%x);
-	}
+	cout<<"0\n";
 	return 0;
 }
