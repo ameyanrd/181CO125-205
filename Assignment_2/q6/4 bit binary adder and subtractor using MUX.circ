@@ -6,7 +6,13 @@
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -170,73 +176,88 @@
     <wire from="(440,1010)" to="(570,1010)"/>
     <wire from="(540,250)" to="(550,250)"/>
     <wire from="(560,1030)" to="(570,1030)"/>
-    <comp lib="1" loc="(490,1200)" name="NOT Gate"/>
-    <comp lib="1" loc="(460,840)" name="NOT Gate"/>
-    <comp lib="1" loc="(260,790)" name="XOR Gate"/>
-    <comp lib="5" loc="(1010,130)" name="LED"/>
-    <comp lib="5" loc="(1050,1190)" name="LED"/>
-    <comp lib="5" loc="(1020,460)" name="LED"/>
-    <comp lib="2" loc="(630,1340)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
+    <comp lib="1" loc="(230,110)" name="XOR Gate"/>
+    <comp lib="6" loc="(1096,1347)" name="Text">
+      <a name="text" val="s4"/>
     </comp>
-    <comp lib="1" loc="(420,140)" name="NOT Gate"/>
-    <comp lib="1" loc="(260,450)" name="XOR Gate"/>
+    <comp lib="1" loc="(530,910)" name="XOR Gate"/>
+    <comp lib="1" loc="(510,540)" name="XOR Gate"/>
+    <comp lib="6" loc="(1095,1187)" name="Text">
+      <a name="text" val="s3"/>
+    </comp>
+    <comp lib="0" loc="(50,1230)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B3"/>
+    </comp>
     <comp lib="1" loc="(450,470)" name="NOT Gate"/>
-    <comp lib="2" loc="(600,1020)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
+    <comp lib="1" loc="(260,790)" name="XOR Gate"/>
+    <comp lib="5" loc="(1050,1190)" name="LED"/>
+    <comp lib="1" loc="(420,140)" name="NOT Gate"/>
+    <comp lib="2" loc="(630,1190)" name="Multiplexer"/>
+    <comp lib="2" loc="(560,130)" name="Multiplexer"/>
+    <comp lib="2" loc="(590,460)" name="Multiplexer"/>
+    <comp lib="6" loc="(1051,127)" name="Text">
+      <a name="text" val="S0"/>
+    </comp>
+    <comp lib="0" loc="(50,520)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
     </comp>
     <comp lib="1" loc="(550,1270)" name="XOR Gate"/>
+    <comp lib="1" loc="(490,1200)" name="NOT Gate"/>
     <comp lib="0" loc="(50,810)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="B2"/>
     </comp>
     <comp lib="1" loc="(280,1230)" name="XOR Gate"/>
-    <comp lib="0" loc="(50,520)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
+    <comp lib="2" loc="(570,290)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
     </comp>
-    <comp lib="1" loc="(510,540)" name="XOR Gate"/>
-    <comp lib="5" loc="(1020,830)" name="LED"/>
+    <comp lib="5" loc="(1020,460)" name="LED"/>
+    <comp lib="5" loc="(1050,1340)" name="LED"/>
+    <comp lib="2" loc="(600,1020)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+    </comp>
+    <comp lib="5" loc="(1010,130)" name="LED"/>
+    <comp lib="2" loc="(630,1340)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+    </comp>
     <comp lib="2" loc="(600,830)" name="Multiplexer"/>
-    <comp lib="0" loc="(50,1290)" name="Pin">
+    <comp lib="1" loc="(460,840)" name="NOT Gate"/>
+    <comp lib="0" loc="(80,20)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="A3"/>
+    </comp>
+    <comp lib="6" loc="(1063,455)" name="Text">
+      <a name="text" val="S1"/>
     </comp>
     <comp lib="0" loc="(50,860)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="A2"/>
     </comp>
+    <comp lib="6" loc="(1061,825)" name="Text">
+      <a name="text" val="s2"/>
+    </comp>
     <comp lib="0" loc="(50,480)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="B1"/>
-    </comp>
-    <comp lib="5" loc="(1050,1340)" name="LED"/>
-    <comp lib="2" loc="(560,130)" name="Multiplexer"/>
-    <comp lib="0" loc="(50,1230)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="B3"/>
-    </comp>
-    <comp lib="1" loc="(480,210)" name="XOR Gate"/>
-    <comp lib="1" loc="(230,110)" name="XOR Gate"/>
-    <comp lib="2" loc="(590,460)" name="Multiplexer"/>
-    <comp lib="2" loc="(570,660)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-    </comp>
-    <comp lib="2" loc="(630,1190)" name="Multiplexer"/>
-    <comp lib="1" loc="(530,910)" name="XOR Gate"/>
-    <comp lib="0" loc="(80,20)" name="Pin">
-      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(50,130)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="B0"/>
     </comp>
+    <comp lib="5" loc="(1020,830)" name="LED"/>
+    <comp lib="2" loc="(570,660)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+    </comp>
     <comp lib="0" loc="(50,170)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="A0"/>
     </comp>
-    <comp lib="2" loc="(570,290)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
+    <comp lib="0" loc="(50,1290)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A3"/>
     </comp>
+    <comp lib="1" loc="(480,210)" name="XOR Gate"/>
+    <comp lib="1" loc="(260,450)" name="XOR Gate"/>
   </circuit>
 </project>
