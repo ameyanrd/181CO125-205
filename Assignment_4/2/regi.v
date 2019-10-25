@@ -1,37 +1,12 @@
 module regi(D, clk, Q, r);
-input [31:0] D;
-input clk, r;
-output [31:0] Q;
-dff d0(D[0], clk, Q[0], r);
-dff d1(D[1], clk, Q[1], r);
-dff d2(D[2], clk, Q[2], r);
-dff d3(D[3], clk, Q[3], r);
-dff d4(D[4], clk, Q[4], r);
-dff d5(D[5], clk, Q[5], r);
-dff d6(D[6], clk, Q[6], r);
-dff d7(D[7], clk, Q[7], r);
-dff d8(D[8], clk, Q[8], r);
-dff d9(D[9], clk, Q[9], r);
-dff d10(D[10], clk, Q[10], r);
-dff d11(D[11], clk, Q[11], r);
-dff d12(D[12], clk, Q[12], r);
-dff d13(D[13], clk, Q[13], r);
-dff d14(D[14], clk, Q[14], r);
-dff d15(D[15], clk, Q[15], r);
-dff d16(D[16], clk, Q[16], r);
-dff d17(D[17], clk, Q[17], r);
-dff d18(D[18], clk, Q[18], r);
-dff d19(D[19], clk, Q[19], r);
-dff d20(D[20], clk, Q[20], r);
-dff d21(D[21], clk, Q[21], r);
-dff d22(D[22], clk, Q[22], r);
-dff d23(D[23], clk, Q[23], r);
-dff d24(D[24], clk, Q[24], r);
-dff d25(D[25], clk, Q[25], r);
-dff d26(D[26], clk, Q[26], r);
-dff d27(D[27], clk, Q[27], r);
-dff d28(D[28], clk, Q[28], r);
-dff d29(D[29], clk, Q[29], r);
-dff d30(D[30], clk, Q[30], r);
-dff d31(D[31], clk, Q[31], r);
+    input [31:0] D;
+    input clk, r;
+    output [31:0] Q;
+    genvar i;
+
+    for(i=0; i<32; i=i+1)
+    begin
+        dff d(D[i], clk, Q[i], r);
+    end
+
 endmodule
