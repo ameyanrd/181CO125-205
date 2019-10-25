@@ -33,7 +33,11 @@ module D_Latch_TB();
     begin
         $dumpfile("d_ff.vcd");
         $dumpvars(0,D_Latch_TB);
-        $monitor($time, ". D = %b. Q = %b", D, Q);
+    end
+
+    always @(Q)
+    begin
+        $display($time, ". D = %b. Q = %b", D, Q);
     end
 endmodule
 

@@ -1,5 +1,5 @@
 $date
-	Fri Oct 25 18:40:24 2019
+	Sat Oct 26 01:02:25 2019
 $end
 $version
 	Icarus Verilog
@@ -11,7 +11,7 @@ $scope module D_Latch_TB $end
 $var wire 1 ! Q $end
 $var reg 1 " D $end
 $var reg 1 # En $end
-$scope module dl1 $end
+$scope module d $end
 $var wire 1 # Clk $end
 $var wire 1 " D $end
 $var wire 1 $ Z $end

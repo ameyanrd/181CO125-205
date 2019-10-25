@@ -1,9 +1,3 @@
-//Name: K Krishna Swaroop & Ameya Deshpande
-//Roll no.:181CO125 & 181CO205
-//Date:23/10/2019
-//Question No.:3
-//Program:Implements 32 bit register file
-//        (writes(input en_write=1) and reads(en_write=0) to a 32 bit register 
 
 module regfile(input clock,input reset, input [4:0] address,
                input en_write, input [31:0] idata,output [31:0] data);

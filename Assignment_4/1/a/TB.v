@@ -5,7 +5,7 @@ module D_Latch_TB();
     reg D, En;
     wire Q;
 
-    dff D_Master_Slave(Q, D, En);
+    D_Master_Slave d(Q, D, En);
     /* Generate clock */
     initial 
     begin
@@ -33,7 +33,11 @@ module D_Latch_TB();
     begin
         $dumpfile("master_slave.vcd");
         $dumpvars(0,D_Latch_TB);
-        $monitor($time, ". D = %b. Q = %b", D, Q);
+    end
+
+    always @(Q)
+    begin
+        $display($time,". D = %b. Q = %b.", D, Q);
     end
 endmodule
 
