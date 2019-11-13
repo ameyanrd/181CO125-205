@@ -142,7 +142,13 @@ module stimulus;
 	clock = 0;
 	for ( i =0; i <=100; i= i+1)
 	#5 clock = ~clock;
-    end  
+    end 
+
+    initial
+    begin
+        $monitor("Input : A = %b\tB = %b\nOutput : data = %b\n", idata1, idata2, data);
+    end
+
 
 endmodule
 

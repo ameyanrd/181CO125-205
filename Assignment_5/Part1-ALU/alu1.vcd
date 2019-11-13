@@ -1,5 +1,5 @@
 $date
-	Fri Nov  8 20:13:23 2019
+	Sun Nov 10 00:53:14 2019
 $end
 $version
 	Icarus Verilog
@@ -9,19 +9,19 @@ $timescale
 $end
 $scope module alu_tb $end
 $var wire 1 ! flag $end
-$var wire 1 " carry_out $end
+$var wire 1 " carry_input_out $end
 $var wire 64 # Result [63:0] $end
 $var reg 64 $ a [63:0] $end
 $var reg 64 % b [63:0] $end
-$var reg 64 & carry_in [63:0] $end
-$var reg 4 ' operation [3:0] $end
+$var reg 64 & carry_input [63:0] $end
+$var reg 4 ' op [3:0] $end
 $scope module c $end
 $var wire 64 ( a [63:0] $end
 $var wire 64 ) b [63:0] $end
-$var wire 64 * carry_in [63:0] $end
-$var wire 4 + operation [3:0] $end
+$var wire 64 * carry_input [63:0] $end
+$var wire 4 + op [3:0] $end
 $var reg 64 , Result [63:0] $end
-$var reg 1 " carry_out $end
+$var reg 1 " carry_input_out $end
 $var reg 1 ! flag $end
 $upscope $end
 $upscope $end
